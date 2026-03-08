@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>باب السرايا الجديدة | لاستيراد الأحذية والملابس</title>
+    
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts (Cairo for elegant Arabic typography) -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#0f172a', // Slate 900
+                            gold: '#d4af37', // Elegant Gold
+                            light: '#f8fafc', // Slate 50
+                            gray: '#64748b'  // Slate 500
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Cairo', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Styles & Animations */
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #f8fafc;
+        }
+        .hero-bg {
+            background-image: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+        }
+        .hover-gold:hover {
+            color: #d4af37;
+            transition: all 0.3s ease;
+        }
+        .btn-gold {
+            background-color: #d4af37;
+            color: #0f172a;
+            transition: all 0.3s ease;
+        }
+        .btn-gold:hover {
+            background-color: #b5952f;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+        }
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: #d4af37;
+            margin: 15px auto 0;
+            border-radius: 2px;
+        }
+    </style>
+</head>
+<body class="text-brand-dark antialiased">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 transition-all duration-300 bg-white text-brand-dark shadow-lg">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="flex items-center gap-3">
+                <img src="logo.png" alt="باب السرايا الجديدة" class="w-12 h-auto">
+                <span class="text-2xl font-bold">باب السرايا <span class="text-brand-gold font-light">الجديدة</span></span>
+            </a>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-8 space-x-reverse items-center font-semibold">
+                <a href="#home" class="hover-gold transition-colors">الرئيسية</a>
+                <a href="#about" class="hover-gold transition-colors">نبذة عنا</a>
+                <a href="#vision" class="hover-gold transition-colors">الرؤية والأهداف</a>
+                <a href="#products" class="hover-gold transition-colors">منتجاتنا</a>
+                <a href="#contact" class="hover-gold transition-colors">اتصل بنا</a>
+            </div>
+
+            <!-- Mobile Menu Button (Visual Only for HTML/CSS requirement) -->
+            <div class="md:hidden">
+                <button class="text-brand-dark focus:outline-none">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero-bg h-screen flex items-center justify-center text-center relative pt-20">
+        <div class="container mx-auto px-6 relative z-10">
+            <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight drop-shadow-lg">
+                الفخامة والأناقة <br> <span class="text-brand-gold">في مكان واحد</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-200 mb-10 max-w-2xl mx-auto font-light drop-shadow-md">
+                رواد استيراد أرقى الملابس والأحذية في السوق الليبي، نجمع بين الجودة العالمية والأسعار التنافسية.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#products" class="btn-gold px-8 py-3 rounded-full font-bold text-lg inline-block">
+                    استكشف منتجاتنا
+                </a>
+                <a href="#contact" class="bg-transparent border-2 border-brand-gold text-brand-gold hover:bg-brand-gold hover:text-brand-dark transition-all duration-300 px-8 py-3 rounded-full font-bold text-lg inline-block">
+                    تواصل معنا
+                </a>
+            </div>
+        </div>
+        <!-- Scroll Down Indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <a href="#about" class="text-brand-gold text-3xl">
+                <i class="fa-solid fa-angle-down"></i>
+            </a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold section-title text-brand-dark">نبذة عن الشركة</h2>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl">
+                        <img src="logo.png" alt="[صورة أزياء راقية]" class="w-full h-auto transform hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/60 to-transparent"></div>
+                    </div>
+                </div>
+               <div class="md:w-1/2 space-y-6">
+    <h3 class="text-2xl font-bold text-brand-gold">من نحن؟</h3>
+    <p class="text-brand-gray text-lg leading-relaxed text-justify">
+        تأسست شركة <strong>باب السرايا الجديدة</strong> انطلاقًا من رؤية طموحة تهدف إلى تقديم تجربة مميزة في عالم الأزياء، لتكون الجسر الذي يربط السوق الليبي بأحدث صيحات الموضة العالمية. ومنذ انطلاقتها، وضعت الشركة نصب أعينها هدفًا واضحًا يتمثل في توفير منتجات تجمع بين الجودة العالية والتصاميم العصرية التي تلبي تطلعات مختلف شرائح المجتمع.
+    </p>
+    <p class="text-brand-gray text-lg leading-relaxed text-justify">
+        نحن شركة متخصصة في استيراد وتجارة أجود أنواع الأحذية والملابس الرجالية والنسائية وملابس الأطفال، حيث نحرص على اختيار منتجاتنا من مصادر موثوقة وعلامات تجارية متميزة لضمان تقديم أفضل ما يواكب تطور عالم الموضة ويعكس الذوق الرفيع لعملائنا.
+    </p>
+    
+    <p class="text-brand-gray text-lg leading-relaxed text-justify">
+        وبفضل التزامنا بالجودة والمصداقية في التعامل، استطاعت الشركة أن تبني علاقات قوية مع عملائها وشركائها، وأن ترسخ مكانتها كواحدة من الشركات الطموحة في مجال استيراد وتجارة الأزياء. ونسعى باستمرار إلى التطور والتوسع لنكون الخيار الأول لكل من يبحث عن الأناقة والجودة والثقة في آنٍ واحد.
+    </p>
+</div>
+                    <div class="flex items-center gap-4 pt-4">
+                        <div class="bg-brand-light p-4 rounded-lg shadow text-center w-32 border-b-2 border-brand-gold">
+                            <i class="fa-solid fa-medal text-3xl text-brand-gold mb-2"></i>
+                            <h4 class="font-bold text-sm">جودة عالية</h4>
+                        </div>
+                        <div class="bg-brand-light p-4 rounded-lg shadow text-center w-32 border-b-2 border-brand-gold">
+                            <i class="fa-solid fa-tags text-3xl text-brand-gold mb-2"></i>
+                            <h4 class="font-bold text-sm">أسعار تنافسية</h4>
+                        </div>
+                        <div class="bg-brand-light p-4 rounded-lg shadow text-center w-32 border-b-2 border-brand-gold">
+                            <i class="fa-solid fa-handshake text-3xl text-brand-gold mb-2"></i>
+                            <h4 class="font-bold text-sm">ثقة ومصداقية</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision & Goals Section -->
+    <section id="vision" class="py-24 bg-brand-light relative">
+        <!-- Decorative background element -->
+        <div class="absolute top-0 right-0 w-64 h-64 bg-brand-gold opacity-5 rounded-full blur-3xl transform translate-x-1/2 -translate-y-1/2"></div>
+        <div class="absolute bottom-0 left-0 w-80 h-80 bg-brand-dark opacity-5 rounded-full blur-3xl transform -translate-x-1/2 translate-y-1/2"></div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold section-title text-brand-dark">رؤيتنا وأهدافنا</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Vision Card -->
+                <div class="glass-card p-10 rounded-2xl transform hover:-translate-y-2 transition-transform duration-300">
+                    <div class="w-16 h-16 bg-brand-dark rounded-full flex items-center justify-center text-brand-gold text-2xl mb-6 shadow-lg">
+                        <i class="fa-regular fa-eye"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-brand-dark">الرؤية</h3>
+                    <p class="text-brand-gray text-lg leading-relaxed">
+                        أن نكون الخيار الأول والوجهة الرائدة في مجال استيراد وتجارة الأزياء والأحذية في ليبيا، مع التطلع المستمر لتوسيع نطاق أعمالنا وتقديم أرقى العلامات التجارية العالمية التي تعزز من مستوى الأناقة والذوق العام في المجتمع.
+                    </p>
+                </div>
+
+                <!-- Goals Card -->
+                <div class="glass-card p-10 rounded-2xl transform hover:-translate-y-2 transition-transform duration-300">
+                    <div class="w-16 h-16 bg-brand-dark rounded-full flex items-center justify-center text-brand-gold text-2xl mb-6 shadow-lg">
+                        <i class="fa-solid fa-bullseye"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-brand-dark">الأهداف</h3>
+                    <ul class="space-y-4 text-brand-gray text-lg">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check text-brand-gold mt-1"></i>
+                            <span>توفير تشكيلات واسعة من المنتجات عالية الجودة بأسعار تنافسية.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check text-brand-gold mt-1"></i>
+                            <span>التطوير المستمر لتلبية احتياجات السوق المحلي المتجددة.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check text-brand-gold mt-1"></i>
+                            <span>بناء علاقات ثقة مستدامة وشراكات قوية مع عملائنا وموردينا.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check text-brand-gold mt-1"></i>
+                            <span>دعم وتعزيز قطاع تجارة التجزئة والجملة في طرابلس وكافة المدن الليبية.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products/Services Highlights -->
+    <section id="products" class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold section-title text-brand-dark">ماذا نستورد؟</h2>
+                <p class="mt-4 text-brand-gray max-w-2xl mx-auto">ننتقي أفضل المصادر العالمية لنقدم للسوق الليبي تنوعاً يرضي جميع الأذواق.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Category 1 -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg h-80">
+                    <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="[صورة ملابس]" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/40 to-transparent flex flex-col justify-end p-8">
+                        <h3 class="text-3xl font-bold text-white mb-2">الملابس الراقية</h3>
+                        <p class="text-gray-300">تشكيلات حديثة من الملابس الرجالية، النسائية، والأطفال لمختلف المواسم والمناسبات.</p>
+                    </div>
+                </div>
+                <!-- Category 2 -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg h-80">
+                    <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="[صورة أحذية]" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/40 to-transparent flex flex-col justify-end p-8">
+                        <h3 class="text-3xl font-bold text-white mb-2">الأحذية العصرية</h3>
+                        <p class="text-gray-300">أحدث الموديلات من الأحذية الرسمية، الرياضية، واليومية التي تجمع بين الراحة والأناقة.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-brand-dark text-white relative overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-5" style="background-image: radial-gradient(#d4af37 1px, transparent 1px); background-size: 30px 30px;"></div>
+        
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">تواصل معنا</h2>
+                <div class="w-16 h-1 bg-brand-gold mx-auto rounded-full"></div>
+                <p class="mt-4 text-gray-300">يسعدنا تواصلكم واستقبال استفساراتكم في أي وقت.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 text-center max-w-5xl mx-auto">
+                <!-- Location -->
+                <div class="bg-white/10 p-8 rounded-2xl backdrop-blur-sm border border-white/10 hover:border-brand-gold/50 transition-colors">
+                    <div class="w-16 h-16 bg-brand-gold/20 rounded-full flex items-center justify-center text-brand-gold text-2xl mx-auto mb-6">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">موقعنا</h4>
+                    <p class="text-gray-300">ليبيا، طرابلس</p>
+                </div>
+
+                <!-- Phone -->
+                <div class="bg-white/10 p-8 rounded-2xl backdrop-blur-sm border border-white/10 hover:border-brand-gold/50 transition-colors">
+                    <div class="w-16 h-16 bg-brand-gold/20 rounded-full flex items-center justify-center text-brand-gold text-2xl mx-auto mb-6">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">أرقام الهواتف</h4>
+                    <p class="text-gray-300 hover:text-brand-gold transition-colors" dir="ltr">091 129 7020</p>
+                    <p class="text-gray-300 hover:text-brand-gold transition-colors" dir="ltr">091 218 3490</p>
+                </div>
+
+                <!-- Email -->
+                <div class="bg-white/10 p-8 rounded-2xl backdrop-blur-sm border border-white/10 hover:border-brand-gold/50 transition-colors">
+                    <div class="w-16 h-16 bg-brand-gold/20 rounded-full flex items-center justify-center text-brand-gold text-2xl mx-auto mb-6">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">البريد الإلكتروني</h4>
+                    <a href="mailto:babalsaraia@gmail.com" class="text-gray-300 hover:text-brand-gold transition-colors block break-words">
+                        babalsaraia@gmail.com
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#0a0f1c] text-gray-400 py-8 border-t border-white/10">
+        <div class="container mx-auto px-6 text-center flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="flex items-center gap-2 text-white font-bold text-xl">
+                <img src="logo.png" alt="باب السرايا الجديدة" class="w-10 h-auto">
+                <span>باب السرايا <span class="text-brand-gold font-light">الجديدة</span></span>
+            </div>
+            <p>&copy; 2026 جميع الحقوق محفوظة لشركة باب السرايا الجديدة.</p>
+            <div class="flex gap-4">
+                <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-brand-gold hover:text-brand-dark transition-all">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-brand-gold hover:text-brand-dark transition-all">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
